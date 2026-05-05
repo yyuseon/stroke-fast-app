@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 "use client";
 
 import { useEffect, useState } from "react";
@@ -181,4 +183,5 @@ setIsLoadingHospitals(false);
       </div>
     </main>
   );
+>>>>>>> 8889a7359e013836eae2d12eb039ad0607c2157d
 }
