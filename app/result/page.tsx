@@ -1,10 +1,11 @@
 "use client";
-import { useEffect, useState } from "react";
+
+import { Suspense, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { getDistanceKm } from "@/lib/distance";
 import { getEstimatedEtaMinutes } from "@/lib/eta";
 
-export default function ResultPage() {
+function ResultContent() {
   const params = useSearchParams();
   const emergency = params.get("emergency") === "true";
 
@@ -179,5 +180,13 @@ setIsLoadingHospitals(false);
 
       </div>
     </main>
+  );
+}
+
+export default function ResultPage() {
+  return (
+    <Suspense fallback={<main className="p-6">결과를 불러오는 중입니다...</main>}>
+      <ResultContent />
+    </Suspense>
   );
 }
