@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 import { NextRequest, NextResponse } from "next/server";
 
 function getTagValue(xml: string, tag: string) {
@@ -50,5 +48,4 @@ export async function GET(req: NextRequest) {
     getTagValue(item, "dutyName").includes("센터"),
 }));
   return NextResponse.json({ hospitals });
->>>>>>> 8889a7359e013836eae2d12eb039ad0607c2157d
 }

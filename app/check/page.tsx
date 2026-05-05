@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-"use client";
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
@@ -123,5 +121,4 @@ export default function CheckPage() {
       </div>
     </main>
   );
->>>>>>> 8889a7359e013836eae2d12eb039ad0607c2157d
 }
